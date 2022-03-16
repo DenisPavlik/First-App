@@ -1,9 +1,8 @@
-import './Profile.css';
-
+import s from "./Profile.module.css";
 
 const Profile = () => {
   return (
-    <div className="content">
+    <div className={s.content}>
       <div>
         <img
           src="https://stoqk.com/wp-content/uploads/2017/03/Sea-Beach-Wallpaper-HD.jpg"
