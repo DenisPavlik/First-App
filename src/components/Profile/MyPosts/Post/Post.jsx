@@ -1,16 +1,16 @@
 import s from "./Post.module.css";
 
-const Post = () => {
+const Post = (props) => {
   return (
     <div>
       <div className={s.item}>
         <img
-          src="https://cdns-images.dzcdn.net/images/artist/4099da261a61666f58bb3598f0c4c37f/500x500.jpg"
+          src={props.image}
           alt="ava"
         />
-        post 1
+        {props.message}
         <div>
-          <span>like</span>
+          <span>{props.likes} &#10084;</span>
         </div>
       </div>
     </div>
