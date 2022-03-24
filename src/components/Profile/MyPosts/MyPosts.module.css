@@ -1,3 +1,7 @@
-.post{
-  font-size: 20px;
+.posts__block {
+  padding: 10px;
+}
+
+.posts {
+  margin-top: 10px;
 }
