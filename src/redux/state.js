@@ -1,3 +1,5 @@
+import { rerenderEntireTree } from "../render";
+
 let state = {
   profilePage: {
     postsData: [
@@ -16,6 +18,7 @@ let state = {
           "https://pbs.twimg.com/profile_images/1119181254002466818/wkr0oSKZ_400x400.jpg",
       },
     ],
+    newPostText: "It-course.com",
   },
   dialogsPage: {
     dialogsData: [
@@ -57,17 +60,41 @@ let state = {
       { id: "4", message: "Yo" },
       { id: "5", message: "Yo" },
     ],
+    newMessageText: "It`s a new message",
   },
 };
 
-export let addPost = (postMessage) => {
+export let addPost = () => {
   let newPost = {
     id: "5",
-    message: postMessage,
+    message: state.profilePage.newPostText,
     likes: "0",
     image:
       "https://ic.pics.livejournal.com/psyteaman/11355449/783618/783618_800.jpg",
   };
   state.profilePage.postsData.push(newPost);
+  state.profilePage.newPostText = "";
+  rerenderEntireTree(state);
 };
+
+export let updateNewPostText = (newText) => {
+  state.profilePage.newPostText = newText;
+  rerenderEntireTree(state);
+}
+
+export let addMessage = () => {
+  let newMessage = {
+    id: "6",
+    message: state.dialogsPage.newMessageText,
+  }
+  state.dialogsPage.messagesData.push(newMessage);
+  state.dialogsPage.newMessageText = "";
+  rerenderEntireTree(state);
+}
+
+export let updateNewMessageText = (newText) =>{
+  state.dialogsPage.newMessageText = newText;
+  rerenderEntireTree(state);
+}
+
 export default state;
