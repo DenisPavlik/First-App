@@ -4,8 +4,8 @@ const Header = () => {
   return (
     <header className={s.header}>
       <img
-        src="https://rusclean.net/wp-content/uploads/2016/12/envato-logo-small.svg"
-        alt="Here img"
+        src="https://cdn.iconscout.com/icon/premium/png-256-thumb/social-network-97-1040773.png"
+        alt="logo"
       />
     </header>
   );
