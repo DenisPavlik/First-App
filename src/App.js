@@ -4,7 +4,7 @@ import "./App.css";
 import Header from "./components/Header/Header";
 import Navbar from "./components/Navbar/Navbar";
 import Profile from "./components/Profile/Profile";
-import Dialogs from "./components/Dialogs/Dialogs";
+import DialogsContainer from "./components/Dialogs/DialogsContainer";
 import News from "./components/News/News";
 import Music from "./components/Music/Music";
 import Settings from "./components/Settings/Settings";
@@ -20,17 +20,17 @@ const App = (props) => {
             path="/profile"
             element={
               <Profile
-                profilePage={props.store.getState().profilePage}
-                dispatch={props.store.dispatch.bind(props.store)}
+                store={props.store}
+                // dispatch={props.store.dispatch.bind(props.store)}
               />
             }
           />
           <Route
             path="/dialogs/*"
             element={
-              <Dialogs
-                dialogsPage={props.store.getState().dialogsPage}
-                dispatch={props.store.dispatch.bind(props.store)}
+              <DialogsContainer
+                store={props.store}
+                // dispatch={props.store.dispatch.bind(props.store)}
               />
             }
           />

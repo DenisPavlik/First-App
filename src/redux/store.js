@@ -2,7 +2,8 @@ import profileReducer from "./profile-reducer";
 import dialogsReducer from "./dialogs-reducer";
 import sidebarReducer from "./sidebar-reducer";
 
-let store = { // OOP объект, который управляет _state-ом
+let store = {
+  // OOP объект, который управляет _state-ом
   _state: {
     profilePage: {
       postsData: [
