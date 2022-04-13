@@ -1,0 +1,80 @@
+.users__wrap{
+  margin: 25px 50px;
+}
+
+.users{
+  display: flex;
+}
+
+.users__follow{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+  width: 15%;
+}
+
+.users__img img{
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.btn_followed{
+  font-size: 20px;
+  width: 100px;
+  color: white;
+  border: none;
+}
+
+.btn_follow {
+  background-color: #06B667;
+}
+
+.btn_unfollow {
+  background-color: #FF4943;
+}
+
+.btn_followed:hover{
+  cursor: pointer;
+}
+
+.users__info{
+  border: 1px solid black;
+  border-radius: 10px;
+  padding: 10px;
+  width: 85%;
+  display: flex;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.info__about{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.about__fullname{
+  font-size: 26px;
+}
+
+.about__status{
+  font-size: 18px;
+}
+
+.info__location{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.location__city{
+  font-size: 20px;
+}
+
+.location__country{
+  font-size: 20px;
+}
