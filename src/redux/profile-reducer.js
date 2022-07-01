@@ -29,7 +29,7 @@ const profileReducer = (state = initialState, action) => {
         message: state.newPostText,
         likes: "0",
         image:
-          "https://ic.pics.livejournal.com/psyteaman/11355449/783618/783618_800.jpg",
+          "https://gate.undelete.news/uploads/titsoutkickedout/aSaCyrrSkgD_TTSTLhvjp.jpg",
       };
       return {
         ...state,

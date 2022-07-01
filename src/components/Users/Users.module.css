@@ -78,3 +78,12 @@
 .location__country{
   font-size: 20px;
 }
+
+.selectedPage{
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.pageChooser{
+  cursor: pointer;
+}
