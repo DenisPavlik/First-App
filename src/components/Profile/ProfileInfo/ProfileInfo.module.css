@@ -5,3 +5,11 @@
 .discription_block{
   padding: 10px;
 }
+
+.lookighForAJob img{
+  margin-left: 5px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  object-fit: cover;
+}
