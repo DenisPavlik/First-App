@@ -34,11 +34,19 @@
 
 .btn_unfollow {
   background-color: #FF4943;
-}
+} 
 
 .btn_followed:hover{
   cursor: pointer;
 }
+
+.btn_follow:disabled{
+  background-color: gray;
+}
+
+.btn_unfollow:disabled{
+  background-color: gray;
+} 
 
 .users__info{
   border: 1px solid black;
