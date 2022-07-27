@@ -15,3 +15,8 @@
   color: white;
   text-decoration: none;
 }
+
+.login_block a:hover {
+  color: white;
+  text-decoration: underline;
+}
