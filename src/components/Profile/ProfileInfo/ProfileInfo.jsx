@@ -1,8 +1,9 @@
 import Preloader from "../../common/preloader/Preloader";
-import s from "./ProfileInfo.module.css";
 import lookighForAJobYes from "./../../../assets/images/lookighForAJobYes.png";
 import lookighForAJobNo from "./../../../assets/images/lookighForAJobNo.png";
 import style from "./ProfileInfo.module.css";
+import ProfileStatus from "./ProfileStatus";
+
 
 const ProfileInfo = (props) => {
   if (!props.profile) {
@@ -11,13 +12,13 @@ const ProfileInfo = (props) => {
 
   return (
     <div>
-      <div className={s.content__image}>
+      <div className={style.content__image}>
         <img
           src="https://stoqk.com/wp-content/uploads/2017/03/Sea-Beach-Wallpaper-HD.jpg"
           alt="sea"
         />
       </div>
-      <div className={s.discription_block}>
+      <div className={style.discription_block}>
         <div>
           <img src={props.profile.photos.large} alt="ava" />
         </div>
@@ -38,6 +39,7 @@ const ProfileInfo = (props) => {
           Looking for a job description:
           {props.profile.lookingForAJobDescription}
         </div>
+        <ProfileStatus status={props.status} updateStatus={props.updateStatus}/>
       </div>
     </div>
   );
