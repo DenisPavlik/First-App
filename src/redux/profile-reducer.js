@@ -1,7 +1,6 @@
 import { profileAPI } from "../api/api";
 
 const ADD_POST = "ADD-POST";
-const UPDATE_NEW_POST_TEXT = "UPDATE-NEW-POST-TEXT";
 const SET_USER_PROFILE = "SET_USER_PROFILE";
 const SET_STATUS = "SET_STATUS";
 
@@ -22,7 +21,6 @@ let initialState = {
         "https://pbs.twimg.com/profile_images/1119181254002466818/wkr0oSKZ_400x400.jpg",
     },
   ],
-  newPostText: "It-course.com",
   profile: null,
   status: "",
 };
@@ -32,7 +30,7 @@ const profileReducer = (state = initialState, action) => {
     case ADD_POST: {
       let newPost = {
         id: "5",
-        message: state.newPostText,
+        message: action.newPostText,
         likes: "0",
         image:
           "https://gate.undelete.news/uploads/titsoutkickedout/aSaCyrrSkgD_TTSTLhvjp.jpg",
@@ -40,13 +38,6 @@ const profileReducer = (state = initialState, action) => {
       return {
         ...state,
         postsData: [...state.postsData, newPost],
-        newPostText: "",
-      };
-    }
-    case UPDATE_NEW_POST_TEXT: {
-      return {
-        ...state,
-        newPostText: action.newText,
       };
     }
     case SET_USER_PROFILE: {
@@ -66,12 +57,7 @@ const profileReducer = (state = initialState, action) => {
   }
 };
 
-export const addPostActionCreator = () => ({ type: ADD_POST });
-
-export const updateNewPostTextActionCreator = (text) => ({
-  type: UPDATE_NEW_POST_TEXT,
-  newText: text,
-});
+export const addPostActionCreator = (newPostText) => ({ type: ADD_POST, newPostText });
 
 export const setUserProfile = (profile) => ({
   type: SET_USER_PROFILE,
