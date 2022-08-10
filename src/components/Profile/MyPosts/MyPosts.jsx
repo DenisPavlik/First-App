@@ -10,6 +10,7 @@ const MyPosts = (props) => {
   ));
 
   const addNewPost = (values) => {
+    debugger;
     props.addPost(values.newPostText);
   }
 
