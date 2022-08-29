@@ -3,6 +3,7 @@ import lookighForAJobYes from "./../../../assets/images/lookighForAJobYes.png";
 import lookighForAJobNo from "./../../../assets/images/lookighForAJobNo.png";
 import style from "./ProfileInfo.module.css";
 import ProfileStatus from "./ProfileStatus";
+import ProfileStatusWithHooks from "./ProfileStatusWithHooks";
 
 
 const ProfileInfo = (props) => {
@@ -39,7 +40,7 @@ const ProfileInfo = (props) => {
           Looking for a job description:
           {props.profile.lookingForAJobDescription}
         </div>
-        <ProfileStatus status={props.status} updateStatus={props.updateStatus}/>
+        <ProfileStatusWithHooks status={props.status} updateStatus={props.updateStatus}/>
       </div>
     </div>
   );
