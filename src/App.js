@@ -1,4 +1,3 @@
-// import logo from './logo.svg';
 import React from "react";
 import { Component } from "react";
 import { Route, Routes } from "react-router-dom";
@@ -25,9 +24,9 @@ class App extends Component {
 
   render() {
     if (!this.props.initialized) {
-      return <Preloader />
+      return <Preloader />;
     }
-    
+
     return (
       <div className="app-wrapper">
         <HeaderContainer />
@@ -51,6 +50,9 @@ class App extends Component {
 
 const mapStateToProps = (state) => ({
   initialized: state.app.initialized,
-})
+});
 
-export default compose(withRouter, connect(mapStateToProps, { initializeApp }))(App);
+export default compose(
+  withRouter,
+  connect(mapStateToProps, { initializeApp })
+)(App);
