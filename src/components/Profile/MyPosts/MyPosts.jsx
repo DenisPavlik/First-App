@@ -11,7 +11,7 @@ const MyPosts = React.memo((props) => {
   const addNewPost = (values) => {
     props.addPost(values.newPostText);
   };
-  console.log("Render Yo");
+
   return (
     <div className={s.posts__block}>
       <h3>My posts</h3>
