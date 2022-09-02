@@ -13,3 +13,8 @@
   border-radius: 50%;
   object-fit: cover;
 }
+
+.mainPhoto{
+  max-width: 200px;
+  background-color: transparent;
+}
